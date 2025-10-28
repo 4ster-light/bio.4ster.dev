@@ -6,14 +6,14 @@ import type { ProfileData } from "@/types/profile"
 import LinkButton from "@/components/LinkButton.vue"
 import ThemeController from "./components/ThemeController.vue"
 
-import Data from "@/assets/data.json"
-const data: ProfileData = Data
+import Data from "@/assets/data.json" with { type: "json" }
+const data = Data as ProfileData
 </script>
 
 <template>
   <ThemeController />
   <div
-    class="min-h-screen flex items-center justify-center p-4"
+    class="min-h-screen flex items-center justify-center p-4 md:bg-linear-to-br from-primary/20 via-base-100 to-secondary/20"
   >
     <div class="w-full max-w-md space-y-6">
       <!-- Profile Section -->

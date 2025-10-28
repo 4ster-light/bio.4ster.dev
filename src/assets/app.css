@@ -80,7 +80,3 @@
   --depth: 1;
   --noise: 0;
 }
-
-:root {
-  @apply bg-linear-to-br from-primary/20 via-base-100 to-secondary/20;
-}
