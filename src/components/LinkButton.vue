@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import type { Link } from "@/types/profile"
+import * as LucideIcons from "lucide-vue-next"
+import { computed } from "vue"
 
-defineProps<Link>()
+const props = defineProps<Link>()
+
+const url = computed(() => {
+  if (props.url.startsWith("http")) return props.url.replace(/^https?:\/\//, "")
+  else if (props.url.startsWith("mailto:")) return props.url.replace(/^mailto:/, "")
+  else return props.url
+})
+
+const IconComponent = computed(() => (LucideIcons as any)[props.icon] || LucideIcons.Link)
 </script>
 
 <template>
@@ -9,9 +19,10 @@ defineProps<Link>()
     :href="url"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn btn-primary btn-lg w-full h-13 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-4"
+    :data-tip="url"
+    class="btn btn-primary btn-lg tooltip tooltip-right w-full h-13 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-4"
   >
-    <span class="text-2xl">{{ icon }}</span>
+    <component :is="IconComponent" :size="24" />
     <span>{{ title }}</span>
   </a>
 </template>

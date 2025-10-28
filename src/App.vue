@@ -13,7 +13,7 @@ const data: ProfileData = Data
 <template>
   <ThemeController />
   <div
-    class="min-h-screen bg-linear-to-br from-primary/20 via-base-100 to-secondary/20 flex items-center justify-center p-4"
+    class="min-h-screen flex items-center justify-center p-4"
   >
     <div class="w-full max-w-md space-y-6">
       <!-- Profile Section -->

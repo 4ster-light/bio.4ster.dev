@@ -1,38 +1,38 @@
 {
   "profile": {
     "name": "✰λster✰",
-    "bio": "Computer engineering student and web/systems programmer, I build things, and sometimes they work"
+    "bio": "Computer engineering student and web/systems programmer, I build things, take a look at my work!"
   },
   "links": [
     {
-      "title": "Blog & Portfolio",
+      "title": "Check out my website",
       "url": "https://4ster.dev",
-      "icon": "🌐"
+      "icon": "Globe"
     },
     {
-      "title": "GitHub",
+      "title": "Take a look at my GitHub",
       "url": "https://github.com/4ster-light",
-      "icon": "💻"
+      "icon": "Github"
     },
     {
-      "title": "LinkedIn",
-      "url": "https://linkedin.com/in/4ster",
-      "icon": "💼"
-    },
-    {
-      "title": "Ko-fi",
+      "title": "Check out my Ko-fi page",
       "url": "https://ko-fi.com/4ster",
-      "icon": "☕"
+      "icon": "Coffee"
     },
     {
-      "title": "X.com",
+      "title": "See me on X/Twitter",
       "url": "https://x.com/4ster_light",
-      "icon": "🐦"
+      "icon": "Twitter"
     },
     {
-      "title": "Contact",
-      "url": "mailto:david.vivar@4ster.dev",
-      "icon": "📧"
+      "title": "See me on LinkedIn",
+      "url": "https://linkedin.com/in/4ster",
+      "icon": "Linkedin"
+    },
+    {
+      "title": "Mail Me",
+      "url": "mailto:me@4ster.dev",
+      "icon": "Mail"
     }
   ]
 }
