@@ -1,7 +1,9 @@
+type LucideIconName = keyof typeof import("lucide-vue-next")
+
 export type Link = {
-  title: string
   url: string
-  icon: string
+  title: string
+  icon: LucideIconName
 }
 
 export type Profile = {
