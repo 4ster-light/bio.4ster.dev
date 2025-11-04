@@ -1,15 +1,7 @@
 <script setup lang="ts">
-import type { Link } from "@/types/profile"
+import type { Link } from "@/data"
+import { LucideLink2 } from "lucide-vue-next"
 import { computed } from "vue"
-import {
-  Coffee,
-  Github,
-  Globe,
-  Link2 as LucideLink,
-  Linkedin,
-  Mail,
-  Twitter
-} from "lucide-vue-next"
 
 const props = defineProps<Link>()
 
@@ -19,16 +11,7 @@ const tooltipUrl = computed(() => {
   else return props.url
 })
 
-const iconMap: Record<string, any> = {
-  Globe,
-  Github,
-  Coffee,
-  Twitter,
-  Linkedin,
-  Mail
-}
-
-const IconComponent = computed(() => iconMap[props.icon] || LucideLink)
+const IconComponent = computed(() => props.icon || LucideLink2)
 </script>
 <template>
   <a

@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import "@/assets/app.css"
-
-import type { ProfileData } from "@/types/profile"
-
+import Data, { type ProfileData } from "@/data"
 import LinkButton from "@/components/LinkButton.vue"
 import ThemeController from "./components/ThemeController.vue"
 
-import Data from "@/assets/data.json" with { type: "json" }
 const data = Data as ProfileData
 </script>
 

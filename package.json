@@ -4,7 +4,7 @@
     "dev": "vite dev --open",
     "build": "vite build",
     "check": "deno fmt && deno lint",
-    "preview": "deno task build && wrangler pages dev",
+    "start": "deno task build && wrangler pages dev",
     "deploy": "deno task build && wrangler pages deploy"
   },
   "dependencies": {
