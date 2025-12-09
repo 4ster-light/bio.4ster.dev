@@ -1,12 +1,12 @@
 import { Coffee, Github, Globe, Linkedin, type LucideIcon, Mail, Twitter } from "lucide-vue-next"
 
-export type Link = {
+export interface Link {
   title: string
   url: string
   icon: LucideIcon
 }
 
-export type ProfileData = {
+export interface ProfileData {
   profile: {
     name: string
     bio: string

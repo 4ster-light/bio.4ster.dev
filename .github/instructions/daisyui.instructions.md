@@ -1007,11 +1007,11 @@ used to indicate the button's function
 
 #### Rules
 
-- {Icon*} should be replaced with the appropriate icon for each button. SVG icons are recommended
+- {Icon\*} should be replaced with the appropriate icon for each button. SVG icons are recommended
 - {IconOriginal} is the icon that we see before opening the FAB
 - {IconMainAction} is the icon we see after opening the FAB
 - {Icon1}, {Icon2}, {Icon3} are the icons for the additional buttons
-- {Label*} is the label text for each button
+- {Label\*} is the label text for each button
 
 ### fieldset
 
