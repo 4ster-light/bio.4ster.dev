@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.vite
+.wrangler
 .DS_Store
 dist
 dist-ssr
@@ -23,12 +25,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
-.eslintcache
-
-# Cypress
-/cypress/videos/
-/cypress/screenshots/
 
 # Vitest
 __screenshots__/

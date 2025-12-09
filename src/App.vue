@@ -4,7 +4,7 @@ import Data, { type ProfileData } from "@/data"
 import LinkButton from "@/components/LinkButton.vue"
 import ThemeController from "./components/ThemeController.vue"
 
-const data = Data as ProfileData
+const data: ProfileData = Data
 </script>
 
 <template>
