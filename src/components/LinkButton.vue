@@ -23,7 +23,7 @@ const IconComponent = computed(() => props.icon || LucideLink2)
       :data-tip="tooltipUrl"
       target="_blank"
       rel="noopener noreferrer"
-      class="btn btn-primary sm:tooltip sm:tooltip-right flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-4 text-sm sm:text-base"
+      class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-4 text-sm sm:text-base"
     >
       <component :is="IconComponent" :size="24" />
       <span>{{ props.title }}</span>
