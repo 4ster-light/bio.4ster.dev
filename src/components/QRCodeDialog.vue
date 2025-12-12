@@ -25,7 +25,7 @@ const emit = defineEmits<{ close: [] }>()
 
       <div class="flex justify-center items-center my-8">
         <QrcodeVue
-          :value="titleUrl"
+          :value="props.url"
           :size="260"
           level="H"
         />
