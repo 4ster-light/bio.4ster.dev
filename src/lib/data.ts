@@ -1,10 +1,5 @@
-import { Coffee, Github, Globe, Linkedin, type LucideIcon, Mail, Twitter } from "lucide-vue-next"
-
-export interface Link {
-  title: string
-  url: string
-  icon: LucideIcon
-}
+import { Coffee, Github, Globe, Linkedin, Mail, Twitter } from "lucide-preact"
+import type { Link } from "@/lib/link.ts"
 
 export interface ProfileData {
   profile: {
