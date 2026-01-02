@@ -2,7 +2,7 @@ export const ThemeController = () => {
   return (
     <div class="fixed top-6 right-6 z-50">
       <label class="swap swap-rotate">
-        <input type="checkbox" class="theme-controller" value="purple_light" />
+        <input type="checkbox" class="theme-controller" value="teal_light" />
         {/* sun icon */}
         <svg
           class="swap-off h-10 w-10 fill-current"
