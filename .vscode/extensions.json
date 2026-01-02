@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "Vue.volar",
     "denoland.vscode-deno",
     "stivo.tailwind-fold",
     "bradlc.vscode-tailwindcss"
