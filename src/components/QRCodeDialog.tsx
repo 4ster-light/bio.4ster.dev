@@ -25,7 +25,7 @@ export default function QRCodeDialog({ open, title, url, onClose }: QRCodeDialog
 
   return (
     <dialog open class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box w-full max-w-sm">
+      <div class="modal-box w-full max-w-sm mx-auto">
         <h3 class="font-bold text-2xl text-center">{titleUrl}</h3>
 
         <div class="flex justify-center items-center my-8">
