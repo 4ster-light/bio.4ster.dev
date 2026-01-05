@@ -24,16 +24,16 @@
     // Dependencies
     "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.18",
     "@preact/preset-vite": "npm:@preact/preset-vite@^2.10.2",
-    "@types/qrcode": "npm:@types/qrcode@^1.5.5",
-    "preact": "npm:preact@^10.28.0",
+    "@types/qrcode": "npm:@types/qrcode@^1.5.6",
+    "preact": "npm:preact@^10.28.1",
     "qrcode": "npm:qrcode@^1.5.4",
     "lucide-preact": "npm:lucide-preact@^0.552.0",
     "tailwindcss": "npm:tailwindcss@^4.1.18",
     "daisyui": "npm:daisyui@^5.5.14",
     "vite": "npm:vite@^7.3.0",
-    "wrangler": "npm:wrangler@^4.55.0"
+    "wrangler": "npm:wrangler@^4.56.0"
   },
-  "allowScripts": ["npm:esbuild@0.27.0", "npm:sharp@0.33.5", "npm:workerd@1.20251213.0"],
+  "allowScripts": ["npm:esbuild@0.27.0", "npm:sharp@0.33.5", "npm:workerd@1.20251217.0"],
 
   "compilerOptions": {
     "jsx": "react-jsx",

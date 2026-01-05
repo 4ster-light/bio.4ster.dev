@@ -2,10 +2,10 @@
 
 A Linktree style page with all my links and a small bio with avatar.
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
-deno i --allow-scripts
+deno i
 deno task dev
 ```
 
@@ -15,12 +15,6 @@ Go to
 [Copilot Instructions](https://github.com/4ster-light/bio/blob/main/.github/copilot-instructions.md)
 for more information about the available commands and workflow.
 
-## 📄 LICENSE
+## LICENSE
 
 MIT License
-
-## 💝 Sponsor
-
-If you like this project, consider supporting me by buying me a coffee.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B41HVJUR)
