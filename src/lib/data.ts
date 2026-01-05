@@ -1,5 +1,5 @@
 import type { Link } from "@/lib/link.ts"
-import { Coffee, Github, Globe, Linkedin, Mail, Twitter, User } from "lucide-preact"
+import { Github, Globe, Linkedin, Mail, Twitter, User } from "lucide-preact"
 
 export interface ProfileData {
   profile: {
@@ -25,37 +25,32 @@ export default {
   },
   links: [
     {
-      title: "Check out my website",
+      title: "Visit my website",
       url: "https://4ster.dev",
       icon: Globe
     },
     {
-      title: "Take a look at my GitHub",
+      title: "View my GitHub",
       url: "https://github.com/4ster-light",
       icon: Github
     },
     {
-      title: "See me on BlueSky",
+      title: "Follow on BlueSky",
       url: "https://bsky.app/profile/4ster-light.bsky.social",
       icon: User
     },
     {
-      title: "Check out my Ko-fi page",
-      url: "https://ko-fi.com/4ster",
-      icon: Coffee
-    },
-    {
-      title: "See me on X/Twitter",
+      title: "Follow on X/Twitter",
       url: "https://x.com/4ster_light",
       icon: Twitter
     },
     {
-      title: "See me on LinkedIn",
+      title: "Connect on LinkedIn",
       url: "https://linkedin.com/in/4ster",
       icon: Linkedin
     },
     {
-      title: "Mail Me",
+      title: "Send me an email",
       url: "mailto:me@4ster.dev",
       icon: Mail
     }
