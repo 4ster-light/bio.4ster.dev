@@ -1,9 +1,11 @@
 import { useState } from "preact/hooks"
-import { Link2, QrCode } from "lucide-preact"
+import { IconLink, IconQrcode } from "@tabler/icons-preact"
 import { type Link, normaliseLink } from "@/lib/link.ts"
 import QRCodeDialog from "@/components/QRCodeDialog.tsx"
 
-export default function LinkButton({ title, url, icon: IconComponent = Link2 }: Link) {
+const IconSize = 25 as const
+
+export default function LinkButton({ title, url, icon: IconComponent = IconLink }: Link) {
   const [showQRModal, setShowQRModal] = useState(false)
   const tooltipUrl = normaliseLink(url)
 
@@ -15,9 +17,9 @@ export default function LinkButton({ title, url, icon: IconComponent = Link2 }: 
           data-tip={tooltipUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-4 text-sm sm:text-base"
+          class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
         >
-          <IconComponent size={24} />
+          <IconComponent size={IconSize} />
           <span>{title}</span>
         </a>
 
@@ -28,7 +30,10 @@ export default function LinkButton({ title, url, icon: IconComponent = Link2 }: 
           data-tip="Show QR code"
           class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
         >
-          <QrCode size={32} />
+          {/* Fix for scaling issue */}
+          <span style="transform: scale(1.1);">
+            <IconQrcode size={IconSize} />
+          </span>
         </button>
       </div>
 
