@@ -49,7 +49,7 @@ export default {
     },
     {
       title: "Follow on BlueSky",
-      url: "https://bsky.app/profile/4ster-light.bsky.social",
+      url: "https://bsky.app/profile/4ster.dev",
       icon: IconBrandBluesky
     },
     {

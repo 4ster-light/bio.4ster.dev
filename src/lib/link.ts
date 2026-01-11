@@ -1,9 +1,9 @@
-import type { ComponentType } from "preact"
+import type { Icon } from "@tabler/icons-preact"
 
 export interface Link {
   title: string
   url: string
-  icon: ComponentType<{ size?: string | number }>
+  icon: Icon
 }
 
 export function normaliseLink(url: string): string {
