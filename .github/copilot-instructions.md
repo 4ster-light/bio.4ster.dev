@@ -29,5 +29,6 @@ committed with an appropriate message and pushed to the main branch before doing
 
 ## **Notes**
 
-- Use meaningful yet short commit messages for better project history.
+- Use meaningful yet short commit messages for better project history following conventional commit
+  messages.
 - Ensure code is linted and formatted before committing changes.
