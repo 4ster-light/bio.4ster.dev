@@ -1,4 +1,3 @@
-import type { Link } from "@/lib/link.ts"
 import Data, { type ProfileData } from "@/lib/data.ts"
 import LinkButton from "@/components/LinkButton.tsx"
 import { ThemeController } from "@/components/ThemeController.tsx"
@@ -27,15 +26,31 @@ export default function App() {
             </div>
           </div>
 
-          {/* Links Section */}
-          <div class="space-y-4">
-            {data.links.map((link: Link) => (
-              <LinkButton
-                key={link.title}
-                title={link.title}
-                url={link.url}
-                icon={link.icon}
-              />
+          {/* Links Sections */}
+          <div class="space-y-6">
+            {data.sections.map((section) => (
+              <div key={section.title} class="space-y-3">
+                {/* Section Title */}
+                <div class="flex items-center gap-4 px-1">
+                  <div class="h-px flex-1 bg-base-content/20" />
+                  <h2 class="text-xs font-semibold tracking-wider text-base-content/60 uppercase">
+                    {section.title}
+                  </h2>
+                  <div class="h-px flex-1 bg-base-content/20" />
+                </div>
+
+                {/* Section Links */}
+                <div class="space-y-3">
+                  {section.links.map((link) => (
+                    <LinkButton
+                      key={link.title}
+                      title={link.title}
+                      url={link.url}
+                      icon={link.icon}
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
