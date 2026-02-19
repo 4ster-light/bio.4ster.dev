@@ -1,6 +1,4 @@
 {
-  "nodeModulesDir": "manual",
-
   "fmt": {
     "lineWidth": 100,
     "semiColons": false,
@@ -8,33 +6,9 @@
     "trailingCommas": "never"
   },
   "exclude": ["node_modules", "deno.lock"],
-
-  "tasks": {
-    "dev": "vite --open",
-    "build": "vite build",
-    "check": "deno fmt && deno lint && deno check",
-    "start": "deno task build && wrangler pages dev",
-    "deploy": "deno task build && wrangler pages deploy"
-  },
-
   "imports": {
-    // Aliases
-    "@/": "./src/",
-
-    // Dependencies
-    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.18",
-    "@preact/preset-vite": "npm:@preact/preset-vite@^2.10.2",
-    "@types/qrcode": "npm:@types/qrcode@^1.5.6",
-    "preact": "npm:preact@^10.28.2",
-    "qrcode": "npm:qrcode@^1.5.4",
-    "@tabler/icons-preact": "npm:@tabler/icons-preact@^3.36.1",
-    "tailwindcss": "npm:tailwindcss@^4.1.18",
-    "daisyui": "npm:daisyui@^5.5.14",
-    "vite": "npm:vite@^7.3.1",
-    "wrangler": "npm:wrangler@^4.57.0"
+    "@/": "./src/"
   },
-  "allowScripts": ["npm:esbuild@0.27.0", "npm:sharp@0.33.5", "npm:workerd@1.20251217.0"],
-
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",

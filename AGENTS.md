@@ -7,15 +7,16 @@ Cloudflare Pages.
 
 ## Development Commands
 
-This project uses **Deno exclusively** for all development, build, and deployment tasks.
+| Command           | Description                                |
+| ----------------- | ------------------------------------------ |
+| `npm run dev`     | Start the development server               |
+| `npm run build`   | Build the project for production           |
+| `npm run start`   | Preview the production environment locally |
+| `npm run deploy`  | Deploy the project to Cloudflare Pages     |
+| `deno task check` | Format, lint and type check (Deno only)    |
 
-| Command            | Description                                     |
-| ------------------ | ----------------------------------------------- |
-| `deno task dev`    | Start the development server                    |
-| `deno task build`  | Build the project for production                |
-| `deno task start`  | Preview the production environment locally      |
-| `deno task deploy` | Deploy the project to Cloudflare Pages          |
-| `deno task check`  | Format, lint and type check the entire codebase |
+**Note:** The project uses `package.json` for dependencies and npm scripts, while `deno.jsonc` is
+used for Deno-specific tooling (formatting, linting, type checking).
 
 ## Deployment
 
@@ -24,12 +25,15 @@ This project uses **Deno exclusively** for all development, build, and deploymen
 
 ### Deployment Workflow
 
-When deploying:
+**Automatic deployments** are configured through Cloudflare Pages. When code is pushed to the main
+branch, Cloudflare automatically builds and deploys the site.
+
+For manual deployments:
 
 1. Run `deno task check` to format, lint, and type check
 2. Commit all changes with a conventional commit message
 3. Push to the main branch
-4. Run `deno task deploy`
+4. Run `npm run deploy`
 
 ## Git Workflow
 

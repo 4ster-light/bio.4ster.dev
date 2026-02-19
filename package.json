@@ -1,0 +1,24 @@
+{
+  "name": "bio.4ster.dev",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "check": "deno fmt && deno lint && deno check"
+  },
+  "dependencies": {
+    "preact": "^10.28.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.18",
+    "@tabler/icons-preact": "^3.36.1",
+    "daisyui": "^5.5.14",
+    "@preact/preset-vite": "^2.10.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/qrcode": "^1.5.6",
+    "vite": "^7.3.1",
+    "wrangler": "^4.57.0"
+  }
+}

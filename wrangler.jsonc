@@ -1,9 +1,9 @@
 {
-  "name": "bio",
-  "compatibility_date": "2025-10-11",
-  "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "dist",
-  "observability": {
-    "enabled": true
-  }
+  "name": "linktree",
+  "compatibility_date": "2026-02-19",
+  "assets": {
+    "directory": "./dist"
+  },
+  "workers_dev": false,
+  "preview_urls": false
 }
