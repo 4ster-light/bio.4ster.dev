@@ -2,15 +2,19 @@
   "name": "bio.4ster.dev",
   "version": "1.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
-    "check": "deno fmt && deno lint && deno check"
+    "preview": "vite preview",
+    "check": "deno fmt && deno lint --fix && deno check"
   },
+
   "dependencies": {
     "preact": "^10.28.2",
     "qrcode": "^1.5.4"
   },
+
   "devDependencies": {
     "tailwindcss": "^4.1.18",
     "@tabler/icons-preact": "^3.36.1",
