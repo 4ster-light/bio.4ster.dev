@@ -7,16 +7,16 @@ Cloudflare Pages.
 
 ## Development Commands
 
-| Command           | Description                                |
-| ----------------- | ------------------------------------------ |
-| `npm run dev`     | Start the development server               |
-| `npm run build`   | Build the project for production           |
-| `npm run start`   | Preview the production environment locally |
-| `npm run deploy`  | Deploy the project to Cloudflare Pages     |
-| `deno task check` | Format, lint and type check (Deno only)    |
+| Command            | Description                                |
+| ------------------ | ------------------------------------------ |
+| `pnpm run dev`     | Start the development server               |
+| `pnpm run build`   | Build the project for production           |
+| `pnpm run preview` | Preview the production environment locally |
+| `pnpm run check`   | Format, lint and type check (Deno only)    |
 
-**Note:** The project uses `package.json` for dependencies and npm scripts, while `deno.jsonc` is
-used for Deno-specific tooling (formatting, linting, type checking).
+> [!NOTE]
+> The project uses `package.json` for dependencies and npm scripts, while `deno.jsonc` is used for
+> Deno-specific tooling (formatting, linting, type checking).
 
 ## Deployment
 
@@ -30,10 +30,9 @@ branch, Cloudflare automatically builds and deploys the site.
 
 For manual deployments:
 
-1. Run `deno task check` to format, lint, and type check
+1. Run `pnpm run check` to format, lint, and type check
 2. Commit all changes with a conventional commit message
 3. Push to the main branch
-4. Run `npm run deploy`
 
 ## Git Workflow
 
@@ -54,7 +53,7 @@ For manual deployments:
 - **Styling**: Tailwind CSS v4
 - **UI Library**: DaisyUI v5
 - **Build Tool**: Vite
-- **Runtime**: Deno
+- **Runtime**: Deno + Pnpm
 
 ## File Structure
 
