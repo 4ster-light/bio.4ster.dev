@@ -1,6 +1,6 @@
 export const ThemeController = () => {
   return (
-    <div class="fixed top-6 right-6 z-50">
+    <div class="absolute top-6 right-6 z-50 md:fixed">
       <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="teal_light" />
         {/* sun icon */}
