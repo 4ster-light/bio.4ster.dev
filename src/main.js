@@ -14,7 +14,7 @@ backdropCloseButton.addEventListener("click", () => dialog.close())
 
 for (const button of document.querySelectorAll("[data-qr-url]")) {
   button.addEventListener("click", async () => {
-    const url = button.dataset.qrUrl
+    const url = new URL(button.dataset.qrUrl, window.location.href).href
     const label = button.dataset.qrTitle ?? normaliseLink(url)
 
     dialogTitle.textContent = normaliseLink(url)
