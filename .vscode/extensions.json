@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "denoland.vscode-deno",
-    "stivo.tailwind-fold",
-    "bradlc.vscode-tailwindcss"
-  ]
+  "recommendations": ["biomejs.biome", "stivo.tailwind-fold", "bradlc.vscode-tailwindcss"]
 }

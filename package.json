@@ -1,25 +1,26 @@
 {
   "name": "bio.4ster.dev",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "packageManager": "pnpm@12.11.2",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "preview": "vite build && vite preview",
-    "check": "deno fmt && deno lint --fix && deno check"
+    "check": "biome check",
+    "check:fix": "biome check --write",
+    "format": "biome format --write"
   },
   "dependencies": {
-    "preact": "^10.29.1",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
-    "tailwindcss": "^4.2.2",
-    "@tabler/icons-preact": "^3.41.1",
-    "daisyui": "^5.5.19",
-    "@preact/preset-vite": "^2.10.5",
-    "@tailwindcss/vite": "^4.2.2",
-    "@types/qrcode": "^1.5.6",
-    "vite": "^7.3.2",
-    "wrangler": "^4.82.2"
+    "@biomejs/biome": "^2.6.6",
+    "@tailwindcss/vite": "^4.3.5",
+    "daisyui": "^5.7.50",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.7",
+    "wrangler": "^4.159.0"
   }
 }

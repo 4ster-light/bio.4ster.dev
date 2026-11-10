@@ -2,21 +2,21 @@
 
 ## Project Overview
 
-A personal bio/links page built with Preact, TypeScript, Tailwind CSS, and DaisyUI. Deployed on
-Cloudflare Pages.
+A personal bio/links page built with plain HTML, vanilla JavaScript, Tailwind CSS and DaisyUI.
+Deployed as a static site on Cloudflare Pages.
 
 ## Development Commands
 
-| Command            | Description                                |
-| ------------------ | ------------------------------------------ |
-| `pnpm run dev`     | Start the development server               |
-| `pnpm run build`   | Build the project for production           |
-| `pnpm run preview` | Preview the production environment locally |
-| `pnpm run check`   | Format, lint and type check (Deno only)    |
+| Command              | Description                             |
+| -------------------- | --------------------------------------- |
+| `pnpm run dev`       | Start the development server            |
+| `pnpm run build`     | Build the project for production        |
+| `pnpm run preview`   | Preview the production build locally    |
+| `pnpm run check`     | Format, lint and check imports (Biome)  |
+| `pnpm run check:fix` | Apply formatting and lint fixes (Biome) |
 
 > [!NOTE]
-> The project uses `package.json` for dependencies and npm scripts, while `deno.jsonc` is used for
-> Deno-specific tooling (formatting, linting, type checking).
+> The project is managed with pnpm. `biome.json` configures formatting and linting.
 
 ## Deployment
 
@@ -30,7 +30,7 @@ branch, Cloudflare automatically builds and deploys the site.
 
 For manual deployments:
 
-1. Run `pnpm run check` to format, lint, and type check
+1. Run `pnpm run check` to format, lint, and check imports
 2. Commit all changes with a conventional commit message
 3. Push to the main branch
 
@@ -48,20 +48,21 @@ For manual deployments:
 
 ## Tech Stack
 
-- **Framework**: Preact (React alternative)
-- **Language**: TypeScript
+- **Build Tool**: Vite
 - **Styling**: Tailwind CSS v4
 - **UI Library**: DaisyUI v5
-- **Build Tool**: Vite
-- **Runtime**: Deno + Pnpm
+- **Language**: HTML, CSS, vanilla JavaScript
+- **Tooling**: Biome
+- **Package Manager**: pnpm
 
 ## File Structure
 
 ```txt
+index.html        # Page markup and link content
 /src
-  /components     # UI components
-  /lib           # Data and utilities
-  /assets        # Styles
-  App.tsx        # Main app component
-  main.tsx       # Entry point
+  /assets         # Styles
+  /lib            # Small utilities
+  main.js         # Entry point (styles + QR dialog)
+/vite.config.js
+/biome.json
 ```

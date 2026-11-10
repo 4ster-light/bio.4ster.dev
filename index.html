@@ -1,13 +1,664 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpg" href="/pfp.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="/pfp.jpg">
     <title>✰λster✰</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="absolute top-6 right-6 z-50 md:fixed">
+      <label class="swap swap-rotate" for="theme-controller">
+        <input id="theme-controller" type="checkbox" class="theme-controller" value="teal_light">
+        <span class="sr-only">Toggle theme</span>
+        <svg
+          class="swap-off h-10 w-10 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+          />
+        </svg>
+        <svg
+          class="swap-on h-10 w-10 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+          />
+        </svg>
+      </label>
+    </div>
+
+    <main
+      class="min-h-screen flex items-center justify-center p-4 md:bg-linear-to-br from-primary/20 via-base-100 to-secondary/20"
+    >
+      <div class="w-full max-w-md space-y-6">
+        <!-- Profile Section -->
+        <div class="text-center space-y-4">
+          <div class="avatar">
+            <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4">
+              <img src="/pfp.jpg" alt="Portrait of λster">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-2xl font-bold text-base-content">✰λster✰</h1>
+            <p class="text-base-content/70 text-sm">
+              Computer engineering student and open source developer, I build things, take a look at
+              my work!
+            </p>
+          </div>
+        </div>
+
+        <!-- Links Sections -->
+        <div class="space-y-6">
+          <section class="space-y-3">
+            <div class="flex items-center gap-4 px-1">
+              <div class="h-px flex-1 bg-base-content/20"></div>
+              <h2 class="text-xs font-semibold tracking-wider text-base-content/60 uppercase">
+                Contact
+              </h2>
+              <div class="h-px flex-1 bg-base-content/20"></div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex gap-2">
+                <a
+                  href="https://t.me/asterdev"
+                  data-tip="t.me/asterdev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                  </svg>
+                  <span>Message me on Telegram</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://t.me/asterdev"
+                  data-qr-title="Message me on Telegram"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Message me on Telegram"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="flex gap-2">
+                <a
+                  href="mailto:me@4ster.dev"
+                  data-tip="me@4ster.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"
+                    />
+                    <path d="M3 7l9 6l9 -6" />
+                  </svg>
+                  <span>Send me an email</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="mailto:me@4ster.dev"
+                  data-qr-title="Send me an email"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Send me an email"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="space-y-3">
+            <div class="flex items-center gap-4 px-1">
+              <div class="h-px flex-1 bg-base-content/20"></div>
+              <h2 class="text-xs font-semibold tracking-wider text-base-content/60 uppercase">
+                Content
+              </h2>
+              <div class="h-px flex-1 bg-base-content/20"></div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex gap-2">
+                <a
+                  href="https://4ster.dev"
+                  data-tip="4ster.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+                  <span>Visit my website</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://4ster.dev"
+                  data-qr-title="Visit my website"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Visit my website"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="flex gap-2">
+                <a
+                  href="https://4sterlight.substack.com"
+                  data-tip="4sterlight.substack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M4 4a16 16 0 0 1 16 16" />
+                    <path d="M4 11a9 9 0 0 1 9 9" />
+                  </svg>
+                  <span>Subscribe on Substack</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://4sterlight.substack.com"
+                  data-qr-title="Subscribe on Substack"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Subscribe on Substack"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="flex gap-2">
+                <a
+                  href="https://github.com/4ster-light"
+                  data-tip="github.com/4ster-light"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                    />
+                  </svg>
+                  <span>View my GitHub</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://github.com/4ster-light"
+                  data-qr-title="View my GitHub"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for View my GitHub"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="space-y-3">
+            <div class="flex items-center gap-4 px-1">
+              <div class="h-px flex-1 bg-base-content/20"></div>
+              <h2 class="text-xs font-semibold tracking-wider text-base-content/60 uppercase">
+                Socials
+              </h2>
+              <div class="h-px flex-1 bg-base-content/20"></div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex gap-2">
+                <a
+                  href="https://bsky.app/profile/4ster.dev"
+                  data-tip="bsky.app/profile/4ster.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856"
+                    />
+                  </svg>
+                  <span>Follow on BlueSky</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://bsky.app/profile/4ster.dev"
+                  data-qr-title="Follow on BlueSky"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Follow on BlueSky"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="flex gap-2">
+                <a
+                  href="https://x.com/4ster_light"
+                  data-tip="x.com/4ster_light"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013l0 .001"
+                    />
+                  </svg>
+                  <span>Follow on Twitter</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://x.com/4ster_light"
+                  data-qr-title="Follow on Twitter"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Follow on Twitter"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div class="flex gap-2">
+                <a
+                  href="https://linkedin.com/in/4ster"
+                  data-tip="linkedin.com/in/4ster"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary sm:tooltip sm:tooltip-left flex-1 h-13 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+                >
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 11v5" />
+                    <path d="M8 8v.01" />
+                    <path d="M12 16v-5" />
+                    <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                    <path
+                      d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"
+                    />
+                  </svg>
+                  <span>Connect on LinkedIn</span>
+                </a>
+                <button
+                  type="button"
+                  data-qr-url="https://linkedin.com/in/4ster"
+                  data-qr-title="Connect on LinkedIn"
+                  data-tip="Show QR code"
+                  aria-label="Show QR code for Connect on LinkedIn"
+                  class="btn btn-primary btn-lg sm:tooltip sm:tooltip-right h-13 w-16 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                >
+                  <span style="transform: scale(1.1)">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 17l0 .01" />
+                      <path
+                        d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M7 7l0 .01" />
+                      <path
+                        d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"
+                      />
+                      <path d="M17 7l0 .01" />
+                      <path d="M14 14l3 0" />
+                      <path d="M20 14l0 .01" />
+                      <path d="M14 14l0 3" />
+                      <path d="M14 20l3 0" />
+                      <path d="M17 17l3 0" />
+                      <path d="M20 17l0 3" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <dialog id="qr-dialog" class="modal modal-bottom sm:modal-middle" aria-labelledby="qr-title">
+      <div class="modal-box w-full max-w-sm mx-auto">
+        <h3 id="qr-title" class="font-bold text-2xl text-center">QR code</h3>
+
+        <div class="flex justify-center items-center my-8">
+          <img id="qr-image" class="w-64 h-64" alt="" hidden>
+          <p id="qr-status" class="text-base-content/50">Generating QR code...</p>
+        </div>
+
+        <button type="button" id="qr-close" class="btn w-full">Close</button>
+      </div>
+
+      <form method="dialog" class="modal-backdrop">
+        <button type="button" id="qr-backdrop-close">close</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

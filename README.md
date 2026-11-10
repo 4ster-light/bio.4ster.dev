@@ -9,7 +9,15 @@ pnpm install
 pnpm run dev
 ```
 
-`Deno` is needed for type checking linting and formatting.
+## Scripts
+
+| Command              | Description                            |
+| -------------------- | -------------------------------------- |
+| `pnpm run dev`       | Start the development server           |
+| `pnpm run build`     | Build the production site into `dist/` |
+| `pnpm run preview`   | Build and preview the production site  |
+| `pnpm run check`     | Check formatting, linting and imports  |
+| `pnpm run check:fix` | Apply Biome formatting and lint fixes  |
 
 ## LICENSE
 
